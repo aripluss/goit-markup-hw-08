@@ -43,6 +43,7 @@
 
   img {
     max-height: 460px;
+
     @include mq(mobile) {
       width: 450px;
     }
