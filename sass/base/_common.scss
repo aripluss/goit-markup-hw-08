@@ -60,6 +60,16 @@ body {
   }
 }
 
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
 // body {
 //   background-color: var(--primary-white-color);
 //   color: var(--primary-text-color);
