@@ -1,0 +1,27 @@
+$primary-text-color: #212121;
+$secondary-text-color: #757575;
+$accent-color: #2196f3;
+$primary-white-color: #ffffff;
+$primary-black-color: #000000;
+$primary-bg-color: #f5f4fa;
+$secondary-bg-color: #2f303a;
+$button-bg-active: #188ce8;
+$header-border-bottom-color: #ececec;
+$portfolio-border-color: #eeeeee;
+$icons-fill-color: #afb1b8;
+$transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+:root {
+  --primary-text-color: #{$primary-text-color};
+  --secondary-text-color: #{$secondary-text-color};
+  --accent-color: #{$accent-color};
+  --primary-white-color: #{$primary-white-color};
+  --primary-black-color: #{$primary-black-color};
+  --primary-bg-color: #{$primary-bg-color};
+  --secondary-bg-color: #{$secondary-bg-color};
+  --button-bg-active: #{$button-bg-active};
+  --header-border-bottom-color: #{$header-border-bottom-color};
+  --portfolio-border-color: #{$portfolio-border-color};
+  --icons-fill-color: #{$icons-fill-color};
+  --transition: #{$transition};
+}
