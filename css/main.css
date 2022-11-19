@@ -86,6 +86,7 @@ body {
 
 img {
   display: block;
+  max-width: 100%;
   height: auto;
 }
 
@@ -856,4 +857,188 @@ img {
   .subscribe__icon {
     margin-left: 12px;
   }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity var(--transition), visibility var(--transition);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--transition);
+  padding: 40px;
+  width: 450px;
+  background-color: var(--primary-white-color);
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, 0%) scale(0);
+}
+.modal__close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  transition: fill var(--transition);
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  cursor: pointer;
+}
+.modal__close-button:hover, .modal__close-button:focus {
+  fill: var(--accent-color);
+}
+.modal__title {
+  margin: 0 0 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--primary-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .modal__title {
+    line-height: 1.15;
+  }
+}
+.modal__field {
+  position: relative;
+}
+.modal__field:not(:nth-last-of-type(-n + 2)) {
+  margin-bottom: 10px;
+}
+.modal__field:nth-last-of-type(2) {
+  margin-bottom: 20px;
+}
+.modal__field:nth-last-of-type(1) {
+  margin-bottom: 30px;
+}
+.modal__label-text {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.01em;
+  color: var(--secondary-text-color);
+}
+.modal__input {
+  padding: 12px 42px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: border var(--transition);
+}
+.modal__input:focus {
+  border: 1px solid var(--accent-color);
+}
+.modal__input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transition: fill var(--transition);
+}
+.modal__input:focus + .modal__input-icon {
+  fill: var(--accent-color);
+}
+.modal .modal__textarea {
+  padding: 12px 16px;
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  outline: none;
+  transition: border var(--transition);
+}
+.modal .modal__textarea::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal .modal__textarea:focus {
+  border: 1px solid var(--accent-color);
+}
+.modal__checkbox-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .modal__checkbox-label {
+    font-size: 14px;
+    line-height: 1.7142857143;
+  }
+}
+.modal__contract-terms-link {
+  color: var(--accent-color);
+  text-decoration-skip-ink: none;
+}
+.modal__checkbox {
+  width: 16px;
+  height: 15px;
+  margin-right: 12px;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border var(--transition), background-color var(--transition);
+}
+.modal__base-checkbox:focus + .modal__checkbox {
+  border: 2px solid var(--accent-color);
+}
+.modal__base-checkbox:checked + .modal__checkbox {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+.modal__check-icon {
+  fill: transparent;
+  transition: fill var(--transition);
+}
+.modal__base-checkbox:checked + .modal__checkbox .modal__check-icon {
+  fill: var(--primary-white-color);
+}
+.modal__submit-button {
+  padding: 10px;
+  min-width: 200px;
+  display: block;
+  transition: background-color var(--transition);
+  margin: 0 auto;
+  border: none;
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: var(--primary-white-color);
+  cursor: pointer;
+}
+.modal__submit-button:hover, .modal__submit-button:focus {
+  background-color: var(--button-bg-active);
 }/*# sourceMappingURL=main.css.map */
