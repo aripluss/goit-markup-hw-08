@@ -11,14 +11,19 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 93%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--transition);
   padding: 40px;
-  width: 450px;
   background-color: var(--primary-white-color);
 
+  @include mq(mobile) {
+    width: 450px;
+  }
+
   @include mq(desktop) {
-    width: 528px;
+    max-width: 528px;
+    width: 100%;
   }
 
   .backdrop.is-hidden & {
@@ -157,7 +162,7 @@
     height: 15px;
     margin-right: 12px;
     border: 2px solid var(--primary-text-color);
-    border-radius: 3px;
+    border-radius: 2px;
     display: flex;
     justify-content: center;
     align-items: center;

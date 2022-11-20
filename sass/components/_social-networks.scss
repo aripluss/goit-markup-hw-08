@@ -1,8 +1,4 @@
 .social-networks {
-  @include mq(desktop) {
-    padding-top: 12px;
-  }
-
   &__list {
     display: flex;
     justify-content: center;

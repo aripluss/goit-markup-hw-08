@@ -1,20 +1,26 @@
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
-  min-width: 480px;
   background-color: var(--secondary-bg-color);
 
   &__container {
     display: flex;
+    align-items: baseline;
     flex-wrap: wrap;
     gap: 60px;
     justify-content: center;
 
+    @include mq(mobile) {
+      width: 480px;
+    }
+
     @include mq(tablet) {
+      width: 768px;
     }
 
     @include mq(desktop) {
       justify-content: space-between;
+      width: 1200px;
     }
   }
 
@@ -29,11 +35,13 @@
 
     @include mq(mobile-only) {
       flex-direction: column;
+
       gap: 60px;
     }
 
     @include mq(tablet) {
       gap: 177px;
+      align-items: baseline;
     }
 
     @include mq(desktop) {
@@ -77,8 +85,14 @@
 /* Subscribe */
 
 .subscribe {
+  width: 100%;
+
+  @include mq(tablet) {
+    width: 450px;
+  }
+
   @include mq(desktop) {
-    padding-top: 12px;
+    width: 570px;
   }
 
   &__title {
@@ -104,7 +118,7 @@
   &__input {
     margin-bottom: 20px;
     padding: 15px 16px;
-    width: 450px;
+    width: 100%;
     height: 50px;
     color: var(--primary-white-color);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -119,7 +133,6 @@
 
     @include mq(desktop) {
       margin-bottom: 0;
-
       width: 358px;
       margin-right: 12px;
     }

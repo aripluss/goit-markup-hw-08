@@ -14,7 +14,7 @@
   margin-bottom: 40px;
 
   @include mq(mobile-only) {
-    width: 326px;
+    max-width: 326px;
   }
 
   @include mq(tablet) {
@@ -63,14 +63,14 @@
   }
 
   &__card {
-    width: 450px;
+    flex-basis: calc((100% - 30px * 0) / 1);
 
     @include mq(tablet) {
-      width: 354px;
+      flex-basis: calc((100% - 30px * 1) / 2);
     }
 
     @include mq(desktop) {
-      width: 370px;
+      flex-basis: calc((100% - 30px * 2) / 3);
     }
   }
 
